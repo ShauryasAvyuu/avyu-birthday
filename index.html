@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy 20th Birthday Avyuu ❤️</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: radial-gradient(circle at top, #12091a, #050308);
+      color: #fff;
+      overflow-x: hidden;
+    }
+    /* Gentle breathing text */
+.breathe {
+  animation: breathe 5s ease-in-out infinite;
+}
+
+@keyframes breathe {
+  0%   { transform: scale(1); opacity: 0.9; }
+  50%  { transform: scale(1.025); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.9; }
+}
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 26px;
+      padding: 16px;
+      background: rgba(0,0,0,0.45);
+      backdrop-filter: blur(14px);
+      z-index: 1000;
+    }
+
+    nav a {
+      color: #ffd6e7;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+    nav a:hover { color: #fff; }
+
+    section {
+      min-height: 100vh;
+      padding: 120px 8vw 80px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+    }
+
+h1 {
+  font-size: clamp(1.8rem, 6vw, 3rem);
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: clamp(1.4rem, 5vw, 2.2rem);
+}
+
+p {
+  font-size: clamp(0.95rem, 3.2vw, 1.1rem);
+  line-height: 1.7;
+}
+
+    h1, h2 {
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 20px;
+    }
+h1, h2, p {
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
+    p {
+      max-width: 760px;
+      font-size: 1.05rem;
+      line-height: 1.85;
+      opacity: 0.95;
+    }
+
+    /* TYPING EFFECT */
+    .typing {
+      border-right: 2px solid rgba(255,255,255,0.8);
+      white-space: nowrap;
+      overflow: hidden;
+      animation: blink 0.8s infinite;
+      display: inline-block;
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(160deg, #ff5fa2, #7b4dff, #1a0633);
+    }
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+    /* TIMER */
+    .timer {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 22px;
+      margin-top: 40px;
+      width: 100%;
+      max-width: 900px;
+    }
+
+    .time-box {
+      background: linear-gradient(145deg, rgba(255,255,255,0.18), rgba(255,255,255,0.05));
+      border-radius: 22px;
+      padding: 26px 20px;
+      box-shadow: 0 25px 55px rgba(0,0,0,0.45);
+      animation: pulse 3.5s infinite ease-in-out;
+    }
+
+    @keyframes pulse {
+      0%,100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+
+    .time-box span {
+      font-size: 2.2rem;
+      font-weight: 600;
+      display: block;
+    }
+
+    .time-box small {
+      opacity: 0.8;
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+    }
+
+    .timer-quote {
+      margin-top: 30px;
+      font-style: italic;
+      opacity: 0.9;
+    }
+
+    /* ---------- SCRATCH CARD SECTION ---------- */
+.scratch-section {
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.scratch-wrapper {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.scratch-card {
+  width: min(90vw, 260px);
+  height: 360px;
+  perspective: 1200px;
+  
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1s ease;
+  transform-style: preserve-3d;
+}
+
+.scratch-card.revealed .card-inner {
+  transform: rotateY(180deg);
+}
+
+
+.card-front,
+.card-back {
+  position: absolute;
+  background: violet ;
+  inset: 0;
+  border-radius: 20px;
+  backface-visibility: hidden;
+  overflow: hidden;
+}
+
+.card-front {
+  background: linear-gradient(135deg, #fe0984, #1f0dc0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-front canvas {
+  position: absolute;
+  inset: 0;
+}
+
+.hint {
+  z-index: 2;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.card-back {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(12px);
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  font-size: 1.15rem;
+  line-height: 1.7;
+}
+ /* ---------- CONFETTI ---------- */
+.confetti {
+  position: fixed;
+  width: 8px;
+  height: 12px;
+  background: red;
+  top: -10px;
+  animation: confettiFall linear forwards;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+@keyframes confettiFall {
+  to {
+    transform: translateY(110vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+
+    /* SLIDER CONTAINER */
+.slider {
+  width: 100%;
+  max-width: 820px;
+  margin-top: 35px;
+  overflow: hidden;
+  border-radius: 26px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.6);
+}
+
+/* SLIDE TRACK */
+.slides {
+  display: flex;
+  transition: transform 1s ease;
+}
+
+/* INDIVIDUAL SLIDE */
+.slide {
+  flex: 0 0 100%;
+  aspect-ratio: 3 / 4; /* ✅ RESPONSIVE HEIGHT */
+  padding: 14px;
+  box-sizing: border-box;
+}
+
+/* FRAME EFFECT */
+.slide-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 22px;
+  overflow: hidden;
+  background: linear-gradient(120deg, #ff8fc7, #7b6cff, #ff8fc7);
+  padding: 10px;
+}
+
+.slide-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+    .frame {
+      width: 100%;
+      height: 100%;
+      padding: 14px;
+      background: linear-gradient(120deg, #ff8fc7, #7b6cff, #ff8fc7);
+      border-radius: 26px;
+      flex-shrink: 0;
+    }
+
+    .frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 18px;
+    }
+
+    /* HEARTS */
+    .heart {
+      position: fixed;
+      bottom: -20px;
+      color: rgba(255,105,180,0.75);
+      font-size: 22px;
+      animation: floatUp linear forwards;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    @keyframes floatUp {
+      to {
+        transform: translateY(-120vh) scale(1.6) rotate(20deg);
+        opacity: 0;
+      }
+    }
+      .card-front {
+  background: linear-gradient(135deg, #413b3b, #2904bb);
+}
+
+
+  /* ---------- CANDLE ---------- */
+.candle-section {
+  min-height: 100vh;
+  padding: 80px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.candle-wrap {
+  position: relative;
+  width: 90px;
+  height: 200px;
+  margin: 30px auto;
+}
+
+.candle-body {
+  width: 100%;
+  height: 150px;
+  background: linear-gradient(#fff, #eaeaea);
+  border-radius: 20px;
+  box-shadow: inset 0 -10px 20px rgba(0,0,0,0.15);
+  cursor: pointer;
+  transition: height 2.5s ease;
+}
+
+.candle-body.melt {
+  height: 110px;
+}
+
+.flame {
+  position: absolute;
+  top: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 22px;
+  height: 35px;
+  background: radial-gradient(circle, #ffd966, #ff7a18);
+  border-radius: 50%;
+  animation: flicker 0.12s infinite alternate;
+}
+
+@keyframes flicker {
+  from { transform: translateX(-50%) scale(1); }
+  to { transform: translateX(-50%) scale(1.1); }
+}
+
+.flame.off {
+  opacity: 0;
+  transform: translateX(-50%) scale(0);
+  transition: all 0.6s ease;
+}
+
+/* ---------- SMOKE ---------- */
+.smoke {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  background: rgba(200,200,200,0.4);
+  border-radius: 50%;
+  opacity: 0;
+  filter: blur(4px);
+}
+
+.smoke.active {
+  animation: smokeRise 3s ease forwards;
+}
+
+@keyframes smokeRise {
+  0% { opacity: 0.6; transform: translate(-50%, 0) scale(1); }
+  100% { opacity: 0; transform: translate(-50%, -80px) scale(2); }
+}
+
+/* ---------- WISH TEXT ---------- */
+.wish-text {
+  max-width: 600px;
+  margin: 25px auto 0;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  opacity: 0.95;
+}
+
+/* Mobile safety */
+@media (max-width: 480px) {
+  .candle-wrap { transform: scale(0.9); }
+}
+
+    /* ---------- BALLOON SECTION ---------- */
+#balloon-love {
+  min-height: 100vh;
+  padding: 80px 20px;
+  background: radial-gradient(circle at top, #140016, #000);
+  text-align: center;
+  position: relative;
+}
+.balloon-scene {
+  max-width: 90vw;
+  overflow: visible;
+}
+
+.balloon-scene {
+  position: relative;
+  width: 300px;
+  height: 420px;
+  margin: 60px auto;
+}
+
+/* Person silhouette */
+.person {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70px;
+  height: 160px;
+  background: linear-gradient(#333, #000);
+  border-radius: 35px 35px 20px 20px;
+}
+.person::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 55px;
+  height: 55px;
+  background: #111;
+  border-radius: 50%;
+}
+
+/* Balloons */
+.balloon {
+  position: absolute;
+  width: 70px;
+  height: 90px;
+  border-radius: 50% 50% 45% 45%;
+  cursor: pointer;
+  animation: floatBalloon 3.5s ease-in-out infinite;
+  box-shadow: 0 0 30px rgba(255,255,255,0.3);
+}
+
+.balloon::after {
+  content: '';
+  position: absolute;
+  bottom: -35px;
+  left: 50%;
+  width: 2px;
+  height: 35px;
+  background: rgba(255,255,255,0.6);
+}
+
+.red { background: #ff4d6d; left: 10px; top: 40px; }
+.pink { background: #ff8fab; left: 115px; top: 0; }
+.purple { background: #b983ff; left: 210px; top: 50px; }
+
+@keyframes floatBalloon {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-18px); }
+}
+
+/* Pop animation */
+.balloon.pop {
+  animation: pop 0.4s forwards;
+}
+@keyframes pop {
+  to {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+/* Message */
+#balloonMessage {
+  margin-top: 40px;
+  font-size: 2.2rem;
+  font-weight: 600;
+  letter-spacing: 4px;
+  min-height: 50px;
+  animation: glowText 2s infinite alternate;
+}
+
+/* Floating word from balloon */
+.floating-word {
+  position: fixed;              /* IMPORTANT */
+  z-index: 9999;                /* ALWAYS ON TOP */
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #fff;
+  pointer-events: none;
+  text-shadow: 0 0 30px hotpink;
+  animation: floatWord 2.4s ease forwards;
+  max-width: 90vw;
+  text-align: center;
+  font-size: clamp(1.4rem, 5vw, 2.4rem);
+
+}
+
+@keyframes floatWord {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 10px) scale(0.8);
+  }
+  30% {
+    opacity: 1;
+    transform: translate(-50%, -30px) scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -120px) scale(1);
+  }
+}
+
+
+
+
+@keyframes glowText {
+  from { text-shadow: 0 0 10px pink; }
+  to { text-shadow: 0 0 30px hotpink; }
+}
+
+
+    footer {
+      padding: 40px;
+      background: rgba(0,0,0,0.45);
+      text-align: center;
+      font-size: 0.9rem;
+      opacity: 0.9;
+    }
+
+    #playBtn {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle, rgba(0,0,0,0.85), #000);
+  color: #fff;
+  font-size: 1.4rem;
+  border: none;
+  cursor: pointer;
+  z-index: 9999;
+}
+    /* Screen heartbeat pulse */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(255,105,180,0.08), transparent 70%);
+  pointer-events: none;
+  animation: heartbeat 2.6s ease-in-out infinite;
+  z-index: 1;
+}
+
+@keyframes heartbeat {
+  0%   { opacity: 0; }
+  20%  { opacity: 0.25; }
+  40%  { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+  section {
+  padding: min(15vh, 80px) 6vw;
+}
+section {
+  min-height: 100vh;
+  padding: clamp(60px, 10vh, 100px) 6vw;
+  display: block; /* IMPORTANT */
+}
+
+
+ section {
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 480px) {
+  section {
+    min-height: auto; /* VERY IMPORTANT */
+  }
+
+  .slider {
+    margin-top: 20px;
+  }
+
+  .timer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+  .balloon {
+    width: 55px;
+    height: 70px;
+  }
+
+  
+
+  </style>
+</head>
+<body>
+<button id="playBtn">Tap to Play Music 🎵</button>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#age">Her Time</a>
+  <a href="#memories">Her World</a>
+  <a href="#letter">Letter</a>
+</nav>
+    
+<section id="home" class="hero">
+  <h1 class="breathe">Happy 20th Birthday, Avyuu ❤️</h1>
+  <p id="heroText"></p>
+</section>
+
+<section id="age">
+  <h2 class="typing" id="ageTitle"></h2>
+  <p class="breathe">
+    You were born on 6th January 2006 — and from that exact moment,
+    the world quietly became a softer, warmer place.
+  </p>
+
+  <div class="timer">
+    <div class="time-box"><span id="years">0</span><small>YEARS</small></div>
+    <div class="time-box"><span id="months">0</span><small>MONTHS</small></div>
+    <div class="time-box"><span id="days">0</span><small>DAYS</small></div>
+    <div class="time-box"><span id="hours">0</span><small>HOURS</small></div>
+    <div class="time-box"><span id="minutes">0</span><small>MINUTES</small></div>
+    <div class="time-box"><span id="seconds">0</span><small>SECONDS</small></div>
+  </div>
+
+  <p class="timer-quote">“Even if we’re struggling, I’ve been counting every second you’ve existed.”</p>
+</section>
+
+<!-- SCRATCH CARD SECTION -->
+<section class="scratch-section">
+  <h1 class="reveal">A Little Secret For You 💌</h1>
+  <p class="reveal">Scratch gently, Avyuu… some things are meant to be discovered slowly.</p>
+
+  <div class="scratch-wrapper">
+
+    <!-- CARD 1 -->
+    <div class="scratch-card" data-revealed="false">
+      <div class="card-inner">
+        <div class="card-front">
+          <canvas class="scratch-canvas"></canvas>
+          <span class="hint">Scratch me ✨</span>
+        </div>
+        <div class="card-back">
+          <p>I may tease you… but I’m totally obsessed with you 😌❤️</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="scratch-card" data-revealed="false">
+      <div class="card-inner">
+        <div class="card-front">
+          <canvas class="scratch-canvas"></canvas>
+          <span class="hint">Scratch me ✨</span>
+        </div>
+        <div class="card-back">
+          <p>Dont ask me why,but i just love you so so so muchh meri babyy 📚💖</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="scratch-card" data-revealed="false">
+      <div class="card-inner">
+        <div class="card-front">
+          <canvas class="scratch-canvas"></canvas>
+          <span class="hint">Scratch me ✨</span>
+        </div>
+        <div class="card-back">
+          <p>You’re angry, cute, dramatic… and still my favorite human 😤💘</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<section id="memories">
+  <h2 class="typing" id="galleryTitle"></h2>
+  <p>
+    Tumhari har tasveer mein kuch alag hi sukoon hai.
+    Jaise har photo mujhe yaad dilati ho
+    ki pyaar sirf milne se nahi hota.
+  </p>
+
+  <div class="slider">
+    <div class="slides" id="slides">
+      <div class="frame"><img src="image1.jpeg"></div>
+      <div class="frame"><img src="image2.jpeg"></div>
+      <div class="frame"><img src="image3.jpeg"></div>
+      <div class="frame"><img src="image4.jpeg"></div>
+      <div class="frame"><img src="image5.jpeg"></div>
+      <div class="frame"><img src="spimage.jpeg"></div>
+    </div>
+  </div>
+</section>
+<section class="candle-section">
+  <h1 class="reveal">Make a Wish for Us</h1>
+  <p class="soft-text">Tap the candle gently, chhutki 💗</p>
+
+  <div class="candle-wrap">
+    <div class="flame" id="flame"></div>
+    <div class="smoke" id="smoke"></div>
+    <div class="candle-body" id="candle"></div>
+  </div>
+
+  <p class="wish-text" id="wishText"></p>
+</section>
+
+
+<section id="letter">
+  <h2>A Letter From My Heart 💌</h2>
+  <p id="letterText" , class="breathe"></p>
+</section>
+
+<!-- BALLOON LOVE SECTION -->
+<section id="balloon-love">
+  <h1 class="reveal"> Something I Want You To Know 💗</h1>
+<p> just pop the balloon</p>
+  <div class="balloon-scene">
+    <!-- Person -->
+    <div class="person"></div>
+
+    <!-- Balloons -->
+    <div class="balloon red" data-text="I"></div>
+    <div class="balloon pink" data-text="LOVE"></div>
+    <div class="balloon purple" data-text="YOU"></div>
+  </div>
+</section>
+
+
+<footer>
+  Made with endless love of shauryanshu — for her love Avyuu ❤️
+</footer>
+
+<audio id="bgMusic" src="song.mp3" loop></audio>
+
+
+<script>
+
+function launchConfetti(x, y) {
+  const colors = ['#ff5fa2', '#ffd36e', '#7b6cff', '#ff8fc7', '#ffffff'];
+  for (let i = 0; i < 40; i++) {
+    const c = document.createElement('div');
+    c.className = 'confetti';
+    c.style.background = colors[Math.floor(Math.random() * colors.length)];
+    c.style.left = x + 'px';
+    c.style.top = y + 'px';
+    c.style.animationDuration = (2 + Math.random() * 2) + 's';
+    document.body.appendChild(c);
+    setTimeout(() => c.remove(), 4000);
+  }
+}
+
+document.querySelectorAll('.scratch-card').forEach(card => {
+  const canvas = card.querySelector('.scratch-canvas');
+  const ctx = canvas.getContext('2d');
+  let scratching = false;
+  let revealed = false;
+
+  function resize() {
+    canvas.width = card.offsetWidth;
+    canvas.height = card.offsetHeight;
+    ctx.globalCompositeOperation = 'source-over';
+   ctx.fillStyle = '#c7f000';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  function scratch(x, y) {
+    ctx.globalCompositeOperation = 'destination-out';
+    ctx.beginPath();
+    ctx.arc(x, y, 22, 0, Math.PI * 2);
+    ctx.fill();
+  }
+
+  function getPos(e) {
+    const r = canvas.getBoundingClientRect();
+    const p = e.touches ? e.touches[0] : e;
+    return { x: p.clientX - r.left, y: p.clientY - r.top };
+  }
+
+  function checkReveal() {
+    const img = ctx.getImageData(0, 0, canvas.width, canvas.height);
+    let cleared = 0;
+    for (let i = 3; i < img.data.length; i += 4) {
+      if (img.data[i] === 0) cleared++;
+    }
+    if (cleared / (canvas.width * canvas.height) > 0.45 && !revealed) {
+      revealed = true;
+      canvas.style.display = 'none';
+      canvas.style.boxShadow = '0 0 30px rgba(199,240,0,0.8)';
+canvas.style.transition = 'box-shadow 0.4s ease';
+      card.classList.add('revealed');
+      const r = card.getBoundingClientRect();
+      launchConfetti(r.left + r.width / 2, r.top + r.height / 2);
+    }
+  }
+
+  canvas.addEventListener('mousedown', () => scratching = true);
+  canvas.addEventListener('mouseup', () => scratching = false);
+  canvas.addEventListener('mouseleave', () => scratching = false);
+  canvas.addEventListener('mousemove', e => {
+    if (!scratching) return;
+    const p = getPos(e);
+    scratch(p.x, p.y);
+    checkReveal();
+  });
+
+  canvas.addEventListener('touchstart', () => scratching = true);
+  canvas.addEventListener('touchend', () => scratching = false);
+  canvas.addEventListener('touchmove', e => {
+    e.preventDefault();
+    if (!scratching) return;
+    const p = getPos(e);
+    scratch(p.x, p.y);
+    checkReveal();
+  }, { passive: false });
+});
+
+
+
+const music = document.getElementById('bgMusic');
+const btn = document.getElementById('playBtn');
+
+btn.addEventListener('click', () => {
+  music.volume = 0.3;
+  music.play();
+  btn.remove(); // remove overlay
+});
+
+
+  /* TYPEWRITER FUNCTION */
+  function typeText(element, text, speed = 40) {
+    let i = 0;
+    function typing() {
+      if (i < text.length) {
+        element.textContent += text.charAt(i);
+        i++;
+        setTimeout(typing, speed);
+      }
+    }
+    typing();
+  }
+
+  /* HERO TEXT */
+  typeText(
+    document.getElementById('heroText'),
+    "Avyu… my baby. Even when things aren’t perfect between us, my heart still chooses you. Your existence alone makes my world feel less heavy, and today, I just want you to feel how deeply you matter to me.",
+    35
+  );
+
+  /* TITLES */
+  typeText(document.getElementById('ageTitle'), "Every Moment You Have Existed ✨", 50);
+  typeText(document.getElementById('galleryTitle'), "Her, In Every Frame 💖", 50);
+
+  /* LETTER */
+  typeText(
+    document.getElementById('letterText'),
+     "Avyuu… my baby. I know we’re not in the easiest place right now, and I know emotions can feel heavy. But my feelings for you have never been uncertain. Even in silence, even in distance, I care about you deeply. I don’t need perfect days — I just need you. I hope today reminds you of how truly special you are, not just to me, but to everyone lucky enough to know you. I’m here, always rooting for you, always caring for you. Let’s take it one step at a time, together.  Happy Birthday, meri chhutki baby❤",
+    30
+  );
+
+  /* AGE TIMER */
+  const birthDate = new Date('2006-01-06T00:00:00');
+  function updateAge() {
+    const now = new Date();
+    let diff = now - birthDate;
+
+    const seconds = Math.floor(diff / 1000);
+    const minutes = Math.floor(seconds / 60);
+    const hours = Math.floor(minutes / 60);
+    const days = Math.floor(hours / 24);
+
+    const years = Math.floor(days / 365.25);
+    const months = Math.floor((days % 365.25) / 30.44);
+
+    document.getElementById('years').innerText = years;
+    document.getElementById('months').innerText = months;
+    document.getElementById('days').innerText = days;
+    document.getElementById('hours').innerText = hours % 24;
+    document.getElementById('minutes').innerText = minutes % 60;
+    document.getElementById('seconds').innerText = seconds % 60;
+  }
+  setInterval(updateAge, 1000);
+  updateAge();
+
+let index = 0;
+const slides = document.getElementById('slides');
+const total = slides.children.length;
+
+setInterval(() => {
+  index = (index + 1) % total;
+  slides.style.transform = `translateX(-${index * 100}%)`;
+}, 4000);
+
+
+  const flame = document.getElementById("flame");
+  const candle = document.getElementById("candle");
+  const smoke = document.getElementById("smoke");
+  const wish = document.getElementById("wishText");
+
+  const message =
+    "Some wishes don’t need words.\nThey just need time, patience… and love.";
+
+  let fired = false;
+
+  candle.addEventListener("click", () => {
+    if (fired) return;
+    fired = true;
+
+    // Flame off
+    flame.classList.add("off");
+
+    // Smoke
+    smoke.classList.add("active");
+
+    // Melt candle
+    candle.classList.add("melt");
+
+    // Mobile vibration (safe)
+    if (navigator.vibrate) {
+      navigator.vibrate([30, 40, 30]);
+    }
+
+    // Typing effect
+    let i = 0;
+    wish.textContent = "";
+    const typer = setInterval(() => {
+      wish.textContent += message[i];
+      i++;
+      if (i >= message.length) clearInterval(typer);
+    }, 45);
+  });
+
+
+
+
+
+  /* HEARTS */
+  setInterval(() => {
+    const heart = document.createElement('div');
+    heart.className = 'heart';
+    heart.innerHTML = '❤️';
+    heart.style.left = Math.random() * 100 + 'vw';
+    heart.style.animationDuration = (4 + Math.random() * 4) + 's';
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 9000);
+  }, 300);
+
+const balloons = document.querySelectorAll('.balloon');
+
+balloons.forEach(balloon => {
+  balloon.addEventListener('click', () => {
+    if (balloon.classList.contains('pop')) return;
+
+    // Pop animation
+    balloon.classList.add('pop');
+
+    // Create floating word
+    const word = document.createElement('div');
+    word.className = 'floating-word';
+    word.textContent = balloon.dataset.text;
+
+    // Get balloon position
+    const rect = balloon.getBoundingClientRect();
+    word.style.left = rect.left + rect.width / 2 + 'px';
+    word.style.top = rect.top + 'px';
+
+    document.body.appendChild(word);
+
+    // Cleanup
+    setTimeout(() => {
+      word.remove();
+    }, 2500);
+  });
+});
+
+</script>
+
+</body>
+</html>
